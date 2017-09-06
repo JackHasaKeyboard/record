@@ -1,0 +1,82 @@
+#cont {
+	padding: 10px;
+	#head {
+		padding: 10px;
+		h1 {
+			padding: 10px;
+			margin: 0;
+		}
+	}
+
+	> div {
+		padding: 10px;
+	}
+
+	#player {
+		display: flex;
+		height: 220px;
+
+		#record {
+			width: 200px;
+			height: 200px;
+
+			svg {
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				overflow: visible; // overflows by half of stroke width
+			}
+		}
+
+		#track {
+			overflow-y: scroll;
+			height: 200px;
+			li {
+				list-style: none;
+				cursor: pointer;
+
+				&#active {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+@keyframes spin {
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+$speed: 60s / 33.3; // 10-in RPM
+
+.spin {
+	-webkit-animation: spin $speed linear infinite;
+	-moz-animation: spin $speed linear infinite;
+	-ms-animation: spin $speed linear infinite;
+	-o-animation: spin $speed linear infinite;
+	animation: spin $speed linear infinite;
+}
+
+#ctrl {
+	display: flex;
+	justify-content: center;
+	#tog {
+		cursor: pointer;
+	}
+}
+
+@keyframes move {
+	to {
+		transform: translate(160px, 0px);
+	}
+}
+
+#needle {
+	animation: move 30s linear 1;
+}
