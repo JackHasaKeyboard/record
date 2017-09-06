@@ -54,13 +54,16 @@
 }
 
 $speed: 60s / 33.3; // 10-in RPM
+$sec: 30;
+
+$rev: $sec * (33.3 / 60);
 
 .spin {
-	-webkit-animation: spin $speed linear infinite;
-	-moz-animation: spin $speed linear infinite;
-	-ms-animation: spin $speed linear infinite;
-	-o-animation: spin $speed linear infinite;
-	animation: spin $speed linear infinite;
+	-webkit-animation: spin $speed linear $rev;
+	-moz-animation: spin $speed linear $rev;
+	-ms-animation: spin $speed linear $rev;
+	-o-animation: spin $speed linear $rev;
+	animation: spin $speed linear $rev;
 }
 
 #ctrl {
