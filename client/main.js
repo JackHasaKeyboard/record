@@ -116,6 +116,8 @@ $(document).ready(function() {
 
 		// track
 		$("#track").append("<li>" + el["title"] + "</li>");
+
+		$('#track li:first-child').attr('id', 'active');
 	});
 
 	// label
