@@ -31,6 +31,9 @@
 		#track {
 			overflow-y: scroll;
 			height: 200px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin: 10px;
 			li {
 				list-style: none;
 				cursor: pointer;
