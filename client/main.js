@@ -138,12 +138,14 @@ $(document).ready(function() {
 		if ($("#record").attr("class") == "-stopped") {
 			$(".track")[i].beginElement();
 
-			$("#record").attr("class", "-playing");
+			setTimeout(function() {
+				$("#record").attr("class", "-playing");
 
-			$("#record svg").attr("class", "");
-			$("#record svg:not(:nth-child(" + (i + 1) + "))").attr("class", "spin");
+				$("#record svg").attr("class", "");
+				$("#record svg:not(:nth-child(" + (i + 1) + "))").attr("class", "spin");
 
-			$("#record").append("<svg id='needle'><path d='M 20,190 H 30 L 20,200' /></svg>");
+				$("#record").append("<svg id='needle'><path d='M 20,190 H 30 L 20,200' /></svg>");
+			}, 260);
 
 			$("#tog").attr("class", "fa fa-pause");
 		} else {
