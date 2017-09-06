@@ -137,21 +137,23 @@ $(document).ready(function() {
 			$(".track")[i].beginElement();
 
 			$("#record").attr("class", "-playing");
-			$("#tog").attr("class", "fa fa-pause");
 
 			$("#record svg").attr("class", "");
 			$("#record svg:not(:nth-child(" + (i + 1) + "))").attr("class", "spin");
 
 			$("#record").append("<svg id='needle'><path d='M 20,190 H 30 L 20,200' /></svg>");
+
+			$("#tog").attr("class", "fa fa-pause");
 		} else {
-			$(".groove")[i].beginElement();
+			$(".groove")[p].beginElement();
 
 			$("#record").attr("class", "-stopped");
-			$("#tog").attr("class", "fa fa-play");
 
 			$("#record svg").attr("class", "");
 
 			$('#needle').remove();
+
+			$("#tog").attr("class", "fa fa-play");
 		}
 
 		p = i;
