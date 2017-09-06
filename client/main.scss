@@ -44,6 +44,10 @@
 			}
 		}
 	}
+
+.spin,
+#needle {
+	animation-fill-mode: forwards;
 }
 
 @keyframes spin {
